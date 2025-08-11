@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story Title</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Story Container -->
+  <article class="story-container">
+    <header class="story-header">
+      <h1 id="storyTitle">First Look: Baroness vs Cover Girl in G.I. JOE #10 by Joshua Williamson & Andrea Milana</h1>
+      <p class="story-meta">Published on <time datetime="2025-07-30">July 30, 2025</time></p>
+      <img src="/images/news/GIJoe010A_Cover_RGB (2).jpg" alt="Featured Image" class="story-image" />
+    </header>
+
+    <section class="story-content">
+      <p>Posted by Royce LeDay</p>
+      <h2>The Record-Breaking Energon Universe Series continues HERE!</h2>
+      <p>Today Skybound and Image Comics, in collaboration with leading games, IP and toy company Hasbro, revealed interior pages and the lineup of variant covers for G.I. JOE #10. Helmed by the top-tier creative team of writer Joshua Williamson (Duke, Cobra Commander), artist Andrea Milana (Cobra Commander), colorist Lee Loughridge (Universal Monsters: The Mummy), and letterer Rus Wooton (Transformers), the next issue of the comic book introducing a bold new vision of G.I. Joe and Cobra to the Energon Universe lands in comic book shops on August 20, 2025. 
+
+ 
+
+Baroness against Cover Girl?! Meanwhile, is Cobra Commander's alliance with Destro on the verge of collapse?  
+
+ 
+
+In addition to the main cover by Tom Reilly, G.I. JOE #10 will feature an open-to-order variant cover by Andrea Milana, the continuation of the 1:10 incentive connecting cover series by Alan Quah, a 1:25 incentive variant by Lucas Meyer & Adriano Lucas, and a 1:50 incentive variant by Homare.  
+
+ 
+
+G.I. JOE is a tentpole of the Energon Universe, the crown jewel of the historic collaboration between Hasbro and Skybound, who has introduced a brand-new era of the TRANSFORMERS and G.I. JOE franchises in one shared comic book universe. Other Energon Universe titles include the ongoing series Void Rivals by writer Robert Kirkman (Invincible, The Walking Dead), artist Conor Hughes (White Ash, The Game), and colorist Patricio Delpeche (The Sandman Universe: Nightmare Country) and the two-time Eisner Award winning TRANSFORMERS by writer Daniel Warren Johnson (Extremity, Do a Powerbomb), artist Jorge Corona (Middlewest), and colorist Mike Spicer (Stillwater, Murder Falcon). Fans should expect can’t-miss moments from every issue of the Energon Universe, as secrets are unveiled along the path to answering the BIG questions from some of the biggest franchises in comics today. 
+
+ 
+
+G.I. JOE #10 (Lunar Codes listed below | $3.99) will be available at comic book shops and digital platforms including Amazon Kindle, Apple Books, and Google Play on Wednesday, August 20, 2025. 
+
+ 
+
+The full list of variant covers is below: 
+
+G.I. JOE #10 Cover A by Tom Reilly (Lunar Code: 0625IM306)  
+G.I. JOE #10 Cover B by Andrea Milana (Lunar Code: 0625IM307) 
+G.I. JOE #10 Cover C (1:10 Copy Incentive) (Connecting) by Alan Quah (Lunar Code: 0625IM308) 
+G.I. JOE #10 Cover D (1:25 Copy Incentive) by Lucas Meyer & Adriano Lucas (Lunar Code: 0625IM309) 
+G.I. JOE #10 Cover E (1:50 Copy Incentive) by Homare (Lunar Code: 0625IM310)</p>
+<img src="/images/news/GIJOE_10_01.jpg" alt="Secondary Image" class="story-inline-image" />
+      <img src="/images/news/GIJOE_10_02.jpg" alt="Secondary Image" class="story-inline-image" />
+      <img src="/images/news/GIJOE_10_03.jpg" alt="Secondary Image" class="story-inline-image" />
+    </section>
+  </article>
+
+  <!-- Related Stories Section -->
+  <section class="related-stories">
+    <h2>Related Stories</h2>
+    <div class="related-grid" id="relatedGrid">
+      <!-- Dynamically populated -->
+    </div>
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/comics.html">Comics</a></li>
+      <li><a href="/news.html">News</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Example related stories (replace with dynamic fetch if needed)
+    const relatedStories = [
+      {
+        title: "Ghost Pepper Teaser Trailer",
+        image: "/images/news/GhostPepper01A_Cover_RGB (2).jpg",
+        link: "/stories/ghost-pepper-teaser.html"
+      },
+      {
+        title: "Transformers #23 First Look",
+        image: "/images/news/Transformers23A_Cover_RGB-(1).jpg",
+        link: "/stories/transformers-23.html"
+      }
+    ];
+
+    const relatedGrid = document.getElementById("relatedGrid");
+    relatedStories.forEach(story => {
+      const card = document.createElement("article");
+      card.innerHTML = `
+        <a href="${story.link}" class="related-link">
+          <img src="${story.image}" alt="${story.title}" />
+          <h3>${story.title}</h3>
+        </a>
+      `;
+      relatedGrid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

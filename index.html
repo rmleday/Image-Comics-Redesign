@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberpunk Comic Reader</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.clouflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js";
+  </script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebar">&times;</button>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Comics</a></li>
+      <li><a href="#">Account</a></li>
+    </ul>
+  </div>
+
+  <!-- Sidebar Toggle -->
+  <!--<button id="toggleSidebar" class="sidebar-btn">☰</button>-->
+  <div class="title-bar">
+<img class="logo" src="/images/image-comics-logo.png">
+</div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="main-hero">
+      <img id="heroImg" src="images/Skinbreaker01F_Cover_RGB.jpg" alt="Featured Comic" />
+      <div class="hero-info">
+        <h2 id="heroTitle">Skinbreaker</h2>
+        <p id="heroCaption">The All-New Survival Epic from Skybound & Image Comics Debuts September 2025</p>
+      </div>
+    </div>
+
+    <div class="newest-comics">
+      <h2>New Releases</h2>
+      <hr>
+      <!--
+      <div class="comic-grid">
+        <div class="comic-card" data-id="battlebeast" data-title="BattleBeast" data-release="April 2025" data-team="Robert Kirkman, Ryan Ottley" data-description="Invincible Superstar team reunites for all new series featuring BattleBeast" data-cover="/images/comics/Dracula_03A_Cover_RGB.jpg">
+          <img src="/images/comics/Dracula_03A_Cover_RGB.jpg">
+          <p>BattleBeast</p>
+        </div>
+      </div>
+      -->
+      
+        <!-- Dynamic Comic Grid -->
+  <div class="comic-grid" id="comicGrid"></div>
+
+  <!-- Reader Container -->
+  <div id="comicContainer"></div>
+
+  <!-- Reader Navigation -->
+  <div id="readerNav" class="reader-nav" style="display: none;">
+    <button id="exitReaderBtn">← Back</button>
+    <button id="openPagePickerBtn">📖 Pages</button>
+  </div>
+
+  <!-- Page Picker Modal
+  <div id="pagePickerModal" class="page-picker">
+    <div class="picker-header">
+      <!--<span>Select a Page</span>
+      <button id="closePickerBtn">✕</button>
+    </div>
+    <div class="picker-grid" id="pickerGrid"></div>
+  </div>
+      -->
+      
+    </div>
+  </div>
+  <div class="news">
+  <h2>Latest News</h2>
+  <hr>
+  <div class="news-grid">
+    
+    <section class="news">
+  <h2>Recent Headlines</h2>
+  <div class="news-grid" id="newsGrid"></div>
+</section>
+  <script>
+  fetch('news.json')
+    .then(response => response.json())
+    .then(news => {
+      const newsGrid = document.getElementById("newsGrid");
+
+      // Sort by date (newest first)
+      news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      news.forEach(item => {
+        const article = document.createElement("article");
+
+        article.innerHTML = `
+          <a href="${item.link}" class="news-link">
+            <img src="${item.image}" alt="${item.title}" />
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <time datetime="${item.date}">${new Date(item.date).toLocaleDateString()}</time>
+          </a>
+        `;
+
+        newsGrid.appendChild(article);
+      });
+    })
+    .catch(error => console.error("Failed to load news:", error));
+</script>
+
+  
+    <!--
+    <article>
+      <img src="/images/news/GIJoe09A_Cover_RGB (2).jpg" alt="G.I. Joe #9" />
+      <p>Baroness and Cover Girl fight for survival in G.I. Joe #9!</p>
+    </article>
+    <article>
+      <img src="/images/news/Covers_Clementine_V3_RGB (2).jpg" alt="Clementine Book Three" />
+      <p>Tillie Walden hits the road with Clementine Book Three!</p>
+    </article>
+    <article>
+      <img src="/images/news/Transformers23A_Cover_RGB-(1).jpg" alt="Transformers #23" />
+      <p>First Look: Enter the Matrix in TRANSFORMERS #23 By Daniel Warren Johnson and Jorge Corona</p>
+    </article>
+    <article>
+      <img src="/images/news/BattleBeast04_CoverD_RGB (1).jpg" alt="Void Rivals #8" />
+      <p>First Look: What Danger Awaits Battle Beast in Prince Salaka’s World in Invincible Universe: Battle Beast #4 by Robert Kirkman & Ryan Ottley?</p>
+    </article>
+    -->
+  </div>
+  <a href="news.html" class="more-news-link">More News →</a>
+  
+</div>
+  
+  <section class="video-section">
+  <h2>Featured Trailer</h2>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/Gd5sF9BoSVM"
+      title="Featured Comic Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+  
+  <!-- Comic Reader Area 
+  <div id="comicContainer">
+    <!--comic pages 
+    <div id="endModal" class="end-modal"></div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!--<li><a href="search.html">Search</a></lia-->
+      <li><a href="comics.html">Comics</a></li>
+     <!-- <li><a href="account.html">Account</a></li>-->
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+  <!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+
+<!-- Unrar.js -->
+<script src="https://cdn.jsdelivr.net/npm/unrar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js";
+</script>
+<script>
+document.querySelectorAll(".comic-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const comicData = {
+      id: card.dataset.id,
+      title: card.dataset.title,
+      release: card.dataset.release,
+      team: card.dataset.team,
+      description: card.dataset.description,
+      cover: card.dataset.cover
+    };
+    localStorage.setItem("selectedComic", JSON.stringify(comicData));
+    window.location.href = "comic-detail.html"; // Your detail page
+  });
+});
+</script>
+<div id="endModal" class="modal">
+  <div class="modal-content">
+    <h2>You've reached the end!</h2>
+    <p>Check out these comics you might like:</p>
+    <div id="recommendations" class="comic-suggestions"></div>
+    <button onclick="closeComic()">Close Comic</button>
+  </div>
+</div>
+</body>
+</html>
+

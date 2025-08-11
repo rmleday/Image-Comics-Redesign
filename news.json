@@ -1,0 +1,34 @@
+[
+  {
+    "id": "void-rival",
+    "title": "Transformers #23 Preview",
+    "description": "IDW reveals spine-chilling artwork for the next installment.",
+    "image": "/images/news/Transformers23A_Cover_RGB-(1).jpg",
+    "link": "/stories/transformers-23.html",
+    "date": "2025-07-29"
+  },
+  {
+    "id": "ghost-pepper-teaser",
+    "title": "Ghost Pepper",
+    "description": "New footage dropped—check out the fiery debut of this breakout series.",
+    "image": "/images/news/GhostPepper01A_Cover_RGB (2).jpg",
+    "link": "/stories/ghost-pepper-teaser.html",
+    "date": "2025-07-28"
+  },
+  {
+  "id": "gij-321",
+  "title": "G.I. Joe RAH",
+  "description": "Shhh! G.I. JOE: A Real American Hero #321 Will Be an All-New Silent Issue",
+  "image": "/images/news/GIJoe_RAH_321A_Cover_RGB (1).jpg",
+  "link": "#",
+  "date": "2025-7-14"
+  },
+  {
+    "id": "gij-10",
+  "title": "G.I. Joe #10 Preview",
+  "description": "First Look: Baroness vs Cover Girl in G.I. JOE #10 by Joshua Williamson & Andrea Milana",
+  "image": "/images/news/GIJoe010A_Cover_RGB (2).jpg",
+  "link": "#",
+  "date": "2025-7-18"
+  }
+]

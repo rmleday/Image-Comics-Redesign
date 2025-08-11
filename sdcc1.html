@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story Title</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Main Story Container -->
+  <article class="story-container">
+    <header class="story-header">
+      <h1 id="storyTitle">SDCC Reveals Unveiled: Skybound, Image & Hasbro Reveal a New Era for the Energon Universe</h1>
+      <p class="story-meta">Published on <time datetime="2025-07-30">July 30, 2025</time></p>
+      <img src="/images/news/Transformers24F_Cover_RGB.jpg" alt="Featured Image" class="story-image" />
+    </header>
+
+    <section class="story-content">
+      <p>Post By Royce LeDay</p>
+      <h2>New Stories Introduced! Andrei Bressan Joins Void Rivals! Tom Reilly Goes Skybound Exclusive!</h2>
+      <p>At the official Energon Universe panel at Comic-Con International: San Diego (SDCC) this weekend, Skybound and Image Comics, in collaboration with leading games, IP and toy company Hasbro, revealed an all-new trailer, covers, and character designs from the shared universe in a panel featuring superstars Robert Kirkman (Void Rivals, TRANSFORMERS), Daniel Warren Johnson (TRANSFORMERS), Joshua Williamson (G.I. JOE, Duke), and Sean Mackiewicz (SVP, Publisher, Skybound). 
+<br><br>
+ 
+<div class="carousel">
+  <div class="carousel-track">
+    <div class="carousel-item"><img src="/images/news/SOUNDWAVE.jpg" alt="1"></div>
+    <div class="carousel-item center"><img src="/images/news/ARCEE..jpg" alt="2"></div>
+    <div class="carousel-item"><img src="/images/news/jazz_new.jpg" alt="3"></div>
+    <div class="carousel-item"><img src="/images/news/WHEELJACK.jpg" alt="4"></div>
+  </div>
+  <button class="carousel-btn prev">❮</button>
+  <button class="carousel-btn next">❯</button>
+</div>
+Aptly titled TRANSFORMERS and G.I. JOE: All Out War in the Energon Universe, the panel was packed with war-themed announcements, and the SDCC audience was granted an exclusive debut of the all-new Energon Universe trailer, which showcased just that. 
+
+ <br><br>
+
+TRANSFORMERS’ Daniel Warren Johnson was on hand to celebrate the series that earned him two Eisner Awards and show off a very special wraparound cover for his final issue, #24. The all-new creative team of writer Robert Kirkman and artist Dan Mora (Justice League Unlimited, Superman) will begin a new age of TRANSFORMERS with issue #25 this October, and the SDCC audience was treated to a glimpse at new variant cover art for issues #25-#26, as well as new character design art by Mora. The Energon Universe will never be the same as the Autobots and Decepticons begin the most surprising new chapter in their war on Earth. 
+
+ <br><br>
+
+It was an absolutely stacked panel for fans of G.I. JOE, where series writer Joshua Williamson announced the Dreadnok War, an epic story which will see G.I. JOE shipping twice monthly for three months, starting this November with issue #13. Original series artist Tom Reilly returns for this arc and is now exclusive to Skybound. Joined by colorist Jordie Bellaire, the record-breaking creative team reunites to kick off the Dreadnok War as Cobra Commander is targeted for death and his only hope to survive is...DUKE? 
+<br><br>
+Void Rivals kicks off its biggest story yet with The Quintesson War, as announced by series writer and co-creator Robert Kirkman. This major moment for the series begins in December with Void Rivals #25, which sees Andrei Bressan (Destro) join as series artist for an Energon Universe epic like nothing you've experienced...and as the new cover reveals teased, the Sacred Ring will never be the same. 
+<br><br>
+ 
+
+The Energon Universe is the crown jewel of the historic collaboration between Hasbro and Skybound, who has introduced a brand-new era of the TRANSFORMERS and G.I. JOE franchises in one shared comic book universe. Energon Universe titles include the ongoing series Void Rivals, TRANSFORMERS and G.I. JOE. Fans should expect can’t miss moments from every issue of the Energon Universe, as secrets are unveiled along the path to answering the BIG questions from some of the biggest franchises in comics today.</p>
+      <img src="/images/news/secondary-image.jpg" alt="Secondary Image" class="story-inline-image" />
+      <p>[Additional content, analysis, or wrap-up]</p>
+    </section>
+  </article>
+
+  <!-- Related Stories Section -->
+  <section class="related-stories">
+    <h2>Related Stories</h2>
+    <div class="related-grid" id="relatedGrid">
+      <!-- Dynamically populated -->
+    </div>
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/comics.html">Comics</a></li>
+      <li><a href="/news.html">News</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Example related stories (replace with dynamic fetch if needed)
+    const relatedStories = [
+      {
+        title: "Ghost Pepper Teaser Trailer",
+        image: "/images/news/news02.jpg",
+        link: "/stories/ghost-pepper-teaser.html"
+      },
+      {
+        title: "Transformers #23 First Look",
+        image: "/images/news/Transformers23A_Cover_RGB-(1).jpg",
+        link: "/stories/transformers-23.html"
+      }
+    ];
+
+    const relatedGrid = document.getElementById("relatedGrid");
+    relatedStories.forEach(story => {
+      const card = document.createElement("article");
+      card.innerHTML = `
+        <a href="${story.link}" class="related-link">
+          <img src="${story.image}" alt="${story.title}" />
+          <h3>${story.title}</h3>
+        </a>
+      `;
+      relatedGrid.appendChild(card);
+    });
+  </script>
+  <script>
+    // Example related stories (replace with dynamic fetch if needed)
+    const relatedStories = [
+      {
+        title: "Ghost Pepper Teaser Trailer",
+        image: "/images/news/news02.jpg",
+        link: "/stories/ghost-pepper-teaser.html"
+      },
+      {
+        title: "Transformers #23 First Look",
+        image: "/images/news/Transformers23A_Cover_RGB-(1).jpg",
+        link: "/stories/transformers-23.html"
+      }
+    ];
+
+    const relatedGrid = document.getElementById("relatedGrid");
+    relatedStories.forEach(story => {
+      const card = document.createElement("article");
+      card.innerHTML = `
+        <a href="${story.link}" class="related-link">
+          <img src="${story.image}" alt="${story.title}" />
+          <h3>${story.title}</h3>
+        </a>
+      `;
+      relatedGrid.appendChild(card);
+    });
+  </script>
+  <script src="main2.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.carousel-item');
+  const track = document.querySelector('.carousel-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('center'));
+    items[currentIndex].classList.add('center');
+
+    const itemWidth = items[0].offsetWidth;
+    const offset = (itemWidth * currentIndex) - ((track.offsetWidth - itemWidth) / 2);
+    track.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function moveCarousel(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = items.length - 1;
+    if (currentIndex >= items.length) currentIndex = 0;
+    updateCarousel();
+  }
+
+  updateCarousel();
+
+  prevBtn.addEventListener('click', () => moveCarousel(-1));
+  nextBtn.addEventListener('click', () => moveCarousel(1));
+});
+</script>
+</body>
+</html>
